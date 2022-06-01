@@ -9,6 +9,11 @@ export class RegiterComponent implements OnInit {
 
   constructor() { }
 
+  genderValues = [
+    {name: 'Laki-laki', value: 'male'},
+    {name: 'Perempuan', value: 'female'}
+  ]
+
   ngOnInit(): void {
   }
 

@@ -1,1 +1,70 @@
-<p>regiter works!</p>
+<div class="container">
+  <mat-card>
+    <mat-card-title class="text-center mb-3">Registrasi Akun</mat-card-title>
+    <form>
+      <div class="row">
+        <div class="col-6">
+          <mat-form-field class="example-full-width" appearance="fill" style="width: 100%">
+            <mat-label>Username</mat-label>
+            <input matInput placeholder="Username">
+          </mat-form-field>
+        </div>
+
+        <div class="col-6">
+          <mat-form-field class="example-full-width" appearance="fill" style="width: 100%">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email" type="email">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-6">
+          <mat-form-field appearance="fill" style="width: 100%;">
+            <mat-label>Jenis Kelamin</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let gender of genderValues" [value]="gender.value">
+                {{gender.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="col-6">
+          <mat-form-field appearance="fill" style="width: 100%">
+            <mat-label>Tanggal Lahir</mat-label>
+            <input matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-6">
+          <mat-form-field class="example-full-width" appearance="fill" style="width: 100%">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="Password" type="password">
+          </mat-form-field>
+        </div>
+
+        <div class="col-6">
+          <mat-form-field class="example-full-width" appearance="fill" style="width: 100%">
+            <mat-label>Konfirmasi Password</mat-label>
+            <input matInput placeholder="Konfirmasi Password" type="password">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-6">
+          <button mat-raised-button color="primary" style="width: 100%">Daftar</button>
+        </div>
+
+        <div class="col-6">
+          <button mat-raised-button color="accent" style="width: 100%">Reset</button>
+        </div>
+      </div>
+    </form>
+  </mat-card>
+</div>
